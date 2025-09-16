@@ -1,0 +1,66 @@
+2. Para cada uno de los siguientes requerimientos, identifique si está bien redactado o no y justifique su respuesta.
+
+La ciudad de Oro Verde ha decidido implementar un sistema de gestión de estacionamientos con el objetivo de optimizar la ocupación y facilitar el pago electrónico. 
+
+El sistema debe permitir a los usuarios buscar espacios disponibles, reservar estacionamientos, procesar pagos en línea y recibir notificaciones sobre el estado de sus reservas. Además, se requiere que la interfaz sea accesible desde dispositivos móviles.
+
+Requerimientos del sistema: 
+
+RF-01: El sistema debe permitir a los usuarios reservar un espacio de estacionamiento. 
+// MAL REDACTADO
+    Justificación:
+
+    Es demasiado genérico y carece de detalles específicos
+    No define qué tipo de usuarios pueden hacer reservas
+    No especifica criterios de reserva (duración, anticipación, cancelación)
+    No establece restricciones o validaciones
+    Falta información sobre el flujo del proceso de reserva
+
+RF-04: El sistema debe enviar una confirmación de reserva mediante mensaje o correo electrónico.
+// PARCIALMENTE BIEN REDACTADO
+    Justificación:
+    Aspectos positivos:
+
+    Define claramente la acción (enviar confirmación)
+    Especifica los medios de comunicación
+
+    Aspectos a mejorar:
+
+    No especifica el contenido mínimo de la confirmación
+    No define tiempos de envío
+    "Mensaje" es ambiguo (¿SMS, push notification?)
+    No establece qué hacer en caso de fallo de envío
+
+RF-05: El sistema debe proporcionar actualizaciones en tiempo real sobre la ocupación de los estacionamientos.
+// PARCIALMENTE BIEN REDACTADO
+    Justificación:
+    Aspectos positivos:
+
+    Define claramente la funcionalidad
+    Especifica que debe ser en tiempo real
+
+    Aspectos a mejorar:
+
+    No define qué constituye "tiempo real" (¿segundos, minutos?)
+    No especifica el formato de las actualizaciones
+    No define quiénes reciben estas actualizaciones
+    No establece la frecuencia de actualización
+
+RNF-02: El sistema debe procesar los pagos en un tiempo máximo de 3 segundos bajo condiciones estándar.
+// BIEN REDACTADO
+    Justificación:
+
+    Define una métrica específica y medible (3 segundos)
+    Establece condiciones claras ("condiciones estándar")
+    Es verificable y testeable
+    Se enfoca en rendimiento, apropiado para un RNF
+
+RNF-05: El sistema debe mantener la integridad de los datos durante las horas pico.
+// MAL REDACTADO
+    Justificación:
+
+    "Integridad de los datos" es un término muy genérico
+    No define qué constituyen las "horas pico"
+    No es medible ni verificable
+    No especifica qué datos específicos ni qué nivel de integridad
+    Falta criterios de aceptación objetivos
